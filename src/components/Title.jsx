@@ -1,6 +1,12 @@
 import React from 'react';
 
 function Title () {
+    
+    for (let i = 1; i <= 50; i++){
+        return <div>
+            <h1>{`hello world: ${i}`}</h1>
+        </div>
+    }
     return (
         <div>
             <h1>hello world</h1>
