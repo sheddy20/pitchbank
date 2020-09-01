@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home () {
     const myStuff = {
-        //name: 'Alesso',
+        name: 'Alesso',
         location: 'fortcollins Wincosin',
         age: 30,
         sex: 'male',
@@ -10,7 +10,7 @@ function Home () {
     }
     return(
         <div>
-            <h1>Name: {myStuff.name ? myStuff.name : '500 name not found'}</h1>
+            <h1>Name: {myStuff.name}</h1>
         </div>
     );
 }

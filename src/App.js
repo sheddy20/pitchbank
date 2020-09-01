@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Title from './components/Title';
-import Home from './components/Home'
+import ImageGridList from "./components/ImageGridList";
 import About from './components/About';
 
 
@@ -10,7 +10,7 @@ function App() {
     <div>
       <h1>hello world</h1>
       <Title />
-      <Home />
+      <ImageGridList />
       <About />
     </div>
   );
