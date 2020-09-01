@@ -1,15 +1,13 @@
 import React from 'react';
-import About from "./components/About";
 import './App.css';
-import Title from "./components/Title"
-import Home from './components/Home';
+import Title from './components/Title';
+
 
 function App() {
   return (
     <div>
-      <About />
-      <Home />
-      <Title/>
+      <h1>hello world</h1>
+      <Title />
     </div>
   );
 }

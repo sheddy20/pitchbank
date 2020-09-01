@@ -1,26 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from "axios";
 
-function Title () {
-    
-    for (let i = 1; i <= 50; i++){
-        return <div>
-            <h1>{`hello world: ${i}`}</h1>
-        </div>
+
+
+class Title extends Component {
+    state = {
+        users: [],
     }
-    return (
-        <div>
-            <h1>hello world</h1>
-            <br></br>
-            <p>my age is: 22</p>
-            <ol>
-                <li>Item one</li>
-                <li>Item two</li>
-                <li>Item three</li>
-                <li>Item four</li>
-                <li>Item five</li>
-            </ol>
-        </div>
-    ); 
+    componentDidMount () {
+         axios.get(`https://jsonplaceholder.typicode.com/users`)
+              .then(res => {
+                  const users = res.data;
+                  this.setState({ users })
+              });
+    }
+    render() {
+        const info = {
+            name: 'shedrack',
+            location: 'San Francisco',
+            age: 40,
+            country: 'United State Of America'
+        }
+        return (
+            <div>
+                <h1>users info in listview</h1>
+                <ul>
+                    {this.state.users.map(m=> <li>{m.name}</li>)}
+                </ul>
+                <h2>Name: {info.name}</h2>
+            </div>
+        );
+    }
 }
 
 export default Title;
