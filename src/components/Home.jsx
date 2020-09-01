@@ -1,27 +1,18 @@
-import React, { Component } from 'react';
-import Axios from "axios";
+import React from 'react';
 
-class Home extends Component {
-    state = {
-        todos: [],
+function Home () {
+    const myStuff = {
+        //name: 'Alesso',
+        location: 'fortcollins Wincosin',
+        age: 30,
+        sex: 'male',
+        isMarried: true,
     }
-
-    componentDidMount() {
-        Axios.get(`https://jsonplaceholder.typicode.com/posts/1/comments`)
-             .then(res =>{
-                 const todos = res.data;
-                 this.setState({ todos });
-             });
-    }
-    render() {
-        return(
-            <div>
-                <ol>
-                    {this.state.todos.map(t=> <li>{t.name}</li>)}
-                </ol>
-            </div>
-        );
-    }
+    return(
+        <div>
+            <h1>Name: {myStuff.name ? myStuff.name : '500 name not found'}</h1>
+        </div>
+    );
 }
 
 export default Home;
