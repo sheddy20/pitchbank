@@ -8,9 +8,7 @@
   pointer-events: none;
 }
 
-.age {
-  color: blue,
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
