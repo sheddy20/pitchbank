@@ -7,24 +7,18 @@ function Home () {
         location: 'fortcollins Wincosin',
         age: 30,
         sex: 'male',
-        isMarried: true,
+        isMarried: 'Single',
     }
 
-    function getAge(age) {
-        if (age === 30) {
-            return <h1 className="age">{info.age}</h1>
-        } else {
-            return <h1>age undefiened</h1>
-        }
-    }
+    
 
     return(
         <div>
             <h1>Name: {info.name ? info.name : 'name props not found'}</h1>
-            <ul>
-                <li>{}</li>
-            </ul>
-            {getAge(info.age)}
+            <h1>Location: {info.location ? info.location : 'No name'}</h1>
+            <h1>Gender: {info.sex ? info.sex : 'Not provided'}</h1>
+            <h1>Marrital Status: {info.isMarried ? info.isMarried : 'Unknown'}</h1>
+            {info.age >= 18 && <p className="one">Age:{info.age}</p> ? <p classNam="two">{info.age}</p> : <p>Age not found</p>}
         </div>
     );
 }
