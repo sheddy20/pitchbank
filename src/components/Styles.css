@@ -1,4 +1,20 @@
-.App {
-    font-size: large;
-    color: black;
+.div-app {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: black;
+    color:  rebeccapurple;
+    
+}
+
+.p-app {
+    font-size: 25px;
+    font-family: fantasy;
+    color: rebeccapurple;
+}
+
+.b-app {
+    font-size: 25px;
+    font-family: fantasy;
+    color: rebeccapurple;
+    border-radius: 5px;
 }
