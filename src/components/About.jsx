@@ -1,27 +1,20 @@
-import React, { Component } from 'react';
-import Axios from 'axios';
+import React, { useState } from 'react';
 
-class About extends Component {
-
-    state = {
-        comments: [],
+export default  function Body () {
+    function addNumbers(num1, num2) {
+        let sum = num1 + num2;
+        return sum;
     }
-    componentDidMount() {
-        Axios.get(`https://jsonplaceholder.typicode.com/comments`)
-             .then(res => {
-                 const comments = res.data;
-                 this.setState({ comments });
-             })
-    }
-    render() {
-        return (
-            <div>
-                <ol>
-                    {this.state.comments.map(com => <li>{com.name}</li>)}
-                </ol>
-            </div>
-        );
-    }
+    const number = addNumbers(10, 5);
+    const [setCounter] = useState(addNumbers(10, 10));
+    return (
+        <div>
+            <input  placeholder="add number 1" />
+            <input  placeholder="add number 2" />
+            <h1>{number}</h1>
+            <button onClick={()=> setCounter(addNumbers(10, 10))}>
+                Press Button..
+            </button>
+        </div>
+    );
 }
-
-export default About;
