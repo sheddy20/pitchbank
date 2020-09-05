@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react'
 
-export default  function Body () {
-    function addNumbers(num1, num2) {
-        let sum = num1 + num2;
-        return sum;
+export default function About () {
+    var fullName = 'Abel Shedrack';
+    if (fullName) {
+        var firstName = fullName.split(' ')[1];
+        return <h1>{firstName}</h1>
     }
-    const number = addNumbers(10, 5);
-    const [setCounter] = useState(addNumbers(10, 10));
     return (
         <div>
-            <input  placeholder="add number 1" />
-            <input  placeholder="add number 2" />
-            <h1>{number}</h1>
-            <button onClick={()=> setCounter(addNumbers(10, 10))}>
-                Press Button..
-            </button>
+            <h1>h</h1>
         </div>
     );
 }
