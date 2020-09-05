@@ -1,14 +1,18 @@
 import React from 'react'
 
 export default function About () {
-    var fullName = 'Abel Shedrack';
-    if (fullName) {
-        var firstName = fullName.split(' ')[1];
-        return <h1>{firstName}</h1>
+    const positive = (x) => {
+        return x * x / 2;
     }
+    const myAge = (num1, num2) => {
+        return num1 - num2;
+    }
+    const checkAge = myAge(2020, 1998);
+    const result = positive(10);
     return (
         <div>
-            <h1>h</h1>
+            <h1>{result}</h1>
+            <h1>{`you are: ${checkAge} years old...`}</h1>
         </div>
     );
 }
