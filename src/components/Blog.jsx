@@ -6,7 +6,7 @@ export default function Blog () {
         cities: ['New York', 'Sweden', 'san francisco', 'Los Angeles'],
         placesVisited() {
           const newCities = this.cities.map((city) =>{
-              return city;
+              return `${this.name} has lived in ${city}`;
           });
           return newCities;
         }
