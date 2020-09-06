@@ -1,20 +1,16 @@
 import React from 'react';
 
 export default function Blog () {
-    const myinfo = {
-        name: 'Shedrack',
-        cities: ['New York', 'Sweden', 'san francisco', 'Los Angeles'],
-        placesVisited() {
-          const newCities = this.cities.map((city) =>{
-              return `${this.name} has lived in ${city}`;
-          });
-          return newCities;
-        }
+    const details = {
+        // name: 'shedrack',
+        // location: 'Karu LGA',
+        employer: 'OSGF',
+        minister: 'George Akume',
     }
-    console.log(myinfo.placesVisited());
     return (
         <div>
-            <h1>hello world..</h1>
+            <h1>Name: {details.name ? details.name : 'Please type ur name'}</h1>
+            <h1>Location: {details.location ? details.location : 'Error 404'}</h1>
         </div>
     );
 }
