@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export default function Blog () {
-    const [counter, setCounter] = useState(0);
-
-    useEffect(() => {
-        document.title = `you click the button ${counter} times`
-    });
-
+    const myinfo = {
+        name: 'Shedrack',
+        cities: ['New York', 'Sweden', 'san francisco', 'Los Angeles'],
+        placesVisited() {
+          const newCities = this.cities.map((city) =>{
+              return city;
+          });
+          return newCities;
+        }
+    }
+    console.log(myinfo.placesVisited());
     return (
         <div>
-            <p>you have tap the button {counter} times</p>
-            <button onClick={()=> setCounter(counter + 1)}>
-                Press the Button..
-            </button>
+            <h1>hello world..</h1>
         </div>
     );
 }
