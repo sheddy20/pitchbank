@@ -1,23 +1,33 @@
 import React from 'react'
 
 export default function About () {
-    const positive = (x) => {
-        return x * x / 2;
+    const address = {
+        name: 'shedrack',
+        last: 'Abel',
+        age: 45,
+        isMarried: true,
+        country: 'Nigeria',
     }
-    const myAge = (num1, num2) => {
-        return num1 - num2;
+    const {name, last, age, isMarried, country} = address;
+    const getFullName = (name) => {
+        return name.split(' ')[1];
     }
-    const negative = (y) => {
-        return y + y;
+    const names = getFullName('Mike Smith');
+
+    const getNames = (myName) => myName.split(' ')[1];
+    const getMyName = getNames('Arash Ferdowsi');
+
+    const fullName = 'Abel Shedrack';
+    let lastName;
+    if (fullName) {
+        lastName = fullName.split(' ')[1];
     }
-    const negations = negative(20);
-    const checkAge = myAge(2020, 1998);
-    const result = positive(10);
     return (
         <div>
-            <h1>{negations}</h1>
-            <h1>{result}</h1>
-            <h1>{`you are: ${checkAge} years old...`}</h1>
+           <h1>{`${name} ${last} ${age} ${country} ${isMarried}`}</h1>
+            <h1>{lastName}</h1>
+            <h1>{getMyName}</h1>
+            <h1>{names}</h1>
         </div>
     );
 }
