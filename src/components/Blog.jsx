@@ -1,16 +1,18 @@
 import React from 'react';
 
-export default function Blog () {
-    const details = {
-        // name: 'shedrack',
-        // location: 'Karu LGA',
-        employer: 'OSGF',
-        minister: 'George Akume',
+export default function Blog() {
+    const getfullName = (name) => {
+        return name.split(' ')[0];
     }
+
+    const getSecondName = (newName) => newName.split(' ')[0];
+    const checkSecond = getSecondName('Lebron James')
+    const names = getfullName('Anthony davis');
     return (
         <div>
-            <h1>Name: {details.name ? details.name : 'Please type ur name'}</h1>
-            <h1>Location: {details.location ? details.location : 'Error 404'}</h1>
+            <h1>{checkSecond}</h1>
+            <h1>{names}</h1>
+            <h1>hello world</h1>
         </div>
     );
 }
