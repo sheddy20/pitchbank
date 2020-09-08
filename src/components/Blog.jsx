@@ -1,18 +1,17 @@
 import React from 'react';
 
-export default function Blog() {
-    const getfullName = (name) => {
-        return name.split(' ')[0];
-    }
-
-    const getSecondName = (newName) => newName.split(' ')[0];
-    const checkSecond = getSecondName('Lebron James')
-    const names = getfullName('Anthony davis');
-    return (
+export default function Blog () {
+    return(
         <div>
-            <h1>{checkSecond}</h1>
-            <h1>{names}</h1>
-            <h1>hello world</h1>
+            <h3>SmartPhones Store.!</h3>
+            <ul>
+                <li>Huawei</li>
+                <li>Xiaomi</li>
+                <li>iPhone 11 pro max</li>
+                <li>Oppo</li>
+                <li>Asus</li>
+                <li>Samsung s20 ultra</li>
+            </ul>
         </div>
     );
 }
